@@ -50,7 +50,7 @@ public class SecurityConfig {
            return http
                    .csrf(AbstractHttpConfigurer::disable) // disable csrf
                    .authorizeHttpRequests(auth-> auth
-                                   .requestMatchers("/api/auth/token").hasRole("ROLE_USER")
+                                   .requestMatchers("/api/auth/token").hasRole("USER")
                                    .anyRequest().hasAnyAuthority("SCOPE_READ")// anyone hitting url needs to have the authority read
                    )
                    .sessionManagement(session ->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
