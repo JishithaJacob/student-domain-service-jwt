@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.net.Authenticator;
-
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -17,7 +15,7 @@ public class AuthController {
 
     @PostMapping("/token")
     public  String token(Authentication authentication){
-       return  tokenService.generateToken(authentication);
+        return tokenService.generateToken(authentication);
     }
 
 }

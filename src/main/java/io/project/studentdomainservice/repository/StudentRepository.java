@@ -1,4 +1,3 @@
-/*
 package io.project.studentdomainservice.repository;
 
 import io.project.studentdomainservice.model.Student;
@@ -13,5 +12,3 @@ public interface StudentRepository extends CrudRepository<Student,Long> {
     Optional<Student> findByUsername(String name) ;
 
 }
-
-*/

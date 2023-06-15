@@ -1,4 +1,3 @@
-/*
 package io.project.studentdomainservice.controller;
 
 import io.project.studentdomainservice.model.Student;
@@ -22,10 +21,5 @@ public class StudentController {
     public Student getStudentById(@PathVariable ("id") Student student){
        return student;
     }
-
-
-
-
-
 }
-*/
+

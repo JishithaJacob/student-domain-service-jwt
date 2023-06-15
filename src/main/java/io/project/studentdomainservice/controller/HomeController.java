@@ -2,6 +2,8 @@ package io.project.studentdomainservice.controller;
 
 //import io.project.studentdomainservice.model.Student;
 //import io.project.studentdomainservice.repository.StudentRepository;
+import io.project.studentdomainservice.model.Student;
+import io.project.studentdomainservice.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -16,16 +18,17 @@ import java.util.Map;
 @RestController
 public class HomeController {
 
-   /* @Autowired
+    @Autowired
     StudentRepository repository;
     @Autowired
-    PasswordEncoder encoder;*/
-    @GetMapping("/")
+    PasswordEncoder encoder;
+
+    @GetMapping("/dashboard")
     public String home(Principal principal) {
         return "Hello, " + principal.getName();
     }
 
-    /*@PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasRole('USER')")
     @GetMapping("/user")
     public String user() {
         return "Hello, User!";
@@ -50,5 +53,4 @@ public class HomeController {
         int enabled = Integer.parseInt(body.get("enabled"));
         return repository.save(new Student(name,password,role,enabled));
     }
-*/
 }

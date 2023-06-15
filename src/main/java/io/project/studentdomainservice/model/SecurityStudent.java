@@ -1,4 +1,3 @@
-/*
 package io.project.studentdomainservice.model;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -30,10 +29,9 @@ public class SecurityStudent implements UserDetails {
                 .map(SimpleGrantedAuthority::new).toList();
     }
 
-   */
-/* .map(SimpleGrantedAuthority::new): This maps each role string to a new
+    /* .map(SimpleGrantedAuthority::new): This maps each role string to a new
     SimpleGrantedAuthority object.The SimpleGrantedAuthority class
-    is typically used in Spring Security to represent a granted authority (or role).*//*
+    is typically used in Spring Security to represent a granted authority (or role).*/
 
 
     @Override
@@ -56,4 +54,3 @@ public class SecurityStudent implements UserDetails {
         return true;
     }
 }
-*/

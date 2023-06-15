@@ -1,4 +1,3 @@
-/*
 package io.project.studentdomainservice.service;
 
 import io.project.studentdomainservice.model.SecurityStudent;
@@ -20,4 +19,4 @@ public class JpaStudentDetailsService implements UserDetailsService {
                 .orElseThrow(()->new UsernameNotFoundException("Username not found"+ username));
     }
 }
-*/
+
